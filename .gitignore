@@ -3,3 +3,11 @@ server_sk.bin
 django_app_sk.bin
 clients.db
 record.bin
+*.bin
+aay_client
+aay_decrypt
+aay_encrypt
+aay_keygen
+aay_proxy
+ntt_test
+secure_test
