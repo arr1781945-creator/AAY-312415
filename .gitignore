@@ -19,3 +19,17 @@ aay_keygen
 aay_proxy
 ntt_test
 secure_test
+*.bak
+*.bak2
+debug*
+fix*.py
+ntt_dbg
+ntt_test_fixed
+ntt_test_main.cpp
+ntt_test_wrapper.cpp
+aay_keygen_fixed
+roundtrip
+roundtrip.cpp
+test
+test.cpp
+test_ntt_forward.cpp
