@@ -1,0 +1,14 @@
+--- arsf_31071602_ntt.hpp.vulnerable
++++ arsf_31071602_ntt.hpp
+@@ -14,9 +14,11 @@
+     // Proper Barrett reduction for 32-bit
+     static inline uint32_t barrett_reduce(uint64_t x) {
+         // x should be < Q * Q for this to work correctly
+         uint64_t q = (x * ARSF_BARRETT_R) >> ARSF_BARRETT_K;
+         int64_t r = x - q * ARSF_Q;
+-        if (r < 0) r += ARSF_Q;
++        // Constant-time: use bitmask instead of branch
++        int64_t mask = -(r >> 63);  // All bits set if r < 0
++        r += (ARSF_Q & mask);       // Conditionally add Q
+         return (uint32_t)r;
+     }

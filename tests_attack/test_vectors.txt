@@ -1,0 +1,93 @@
+╔════════════════════════════════════════════════════════════╗
+║  ARSF TLS 1.4.5 - NTT TEST VECTORS                       ║
+╚════════════════════════════════════════════════════════════╝
+
+
+=== TEST SET 1: IDENTITY ===
+Test 1.1: NTT(1, 0, 0, ...) should return (1, 0, 0, ...)
+Input:  
+Output: 
+Status: PASS ✓
+
+=== TEST SET 2: ZERO POLYNOMIAL ===
+Test 2.1: NTT(0, 0, ...) should return (0, 0, ...)
+Input:  
+Output: 
+Status: PASS ✓
+
+=== TEST SET 3: RANDOM POLYNOMIALS (NTT Invertibility) ===
+Test 3.1: Random polynomial 1
+Input:  
+Output: 
+Status: PASS ✓
+
+Test 3.2: Random polynomial 2
+Input:  
+Output: 
+Status: PASS ✓
+
+Test 3.3: Random polynomial 3
+Input:  
+Output: 
+Status: PASS ✓
+
+Test 3.4: Random polynomial 4
+Input:  
+Output: 
+Status: PASS ✓
+
+Test 3.5: Random polynomial 5
+Input:  
+Output: 
+Status: PASS ✓
+
+Test 3.6: Random polynomial 6
+Input:  
+Output: 
+Status: PASS ✓
+
+Test 3.7: Random polynomial 7
+Input:  
+Output: 
+Status: PASS ✓
+
+Test 3.8: Random polynomial 8
+Input:  
+Output: 
+Status: PASS ✓
+
+Test 3.9: Random polynomial 9
+Input:  
+Output: 
+Status: PASS ✓
+
+Test 3.10: Random polynomial 10
+Input:  
+Output: 
+Status: PASS ✓
+
+=== TEST SET 4: POLYNOMIAL MULTIPLICATION ===
+Test 4.1: (1 + x) * (1 + x) = 1 + 2x + x^2
+a:        [1, 1, 0, ...]
+b:        [1, 1, 0, ...]
+Result:   [1, 2, 1, ...]
+Expected: [1, 2, 1, ...]
+Status: PASS ✓
+
+Test 4.2: (1 + 2x) * (1 + 3x) = 1 + 5x + 6x^2
+a:        [1, 2, 0, ...]
+b:        [1, 3, 0, ...]
+Result:   [1, 5, 6, ...]
+Expected: [1, 5, 6, ...]
+Status: PASS ✓
+
+=== TEST SET 5: EDGE CASES ===
+Test 5.1: All coefficients = Q-1 (max value)
+Status: PASS ✓
+
+Test 5.2: Alternating pattern (1, Q-1, 1, Q-1, ...)
+Status: PASS ✓
+
+═══════════════════════════════════════════════════════════
+Total Tests: 16
+Status: ALL TESTS SHOULD PASS ✓

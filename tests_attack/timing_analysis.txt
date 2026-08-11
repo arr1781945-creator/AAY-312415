@@ -1,0 +1,19 @@
+TIMING VARIANCE ROOT CAUSES:
+
+1. COMPILER OPTIMIZATION EFFECTS
+   └─ -O0: Slow but consistent
+   └─ -O2/-O3: Fast but variable (branch prediction, cache)
+   └─ Remedy: Use barrier instructions
+
+2. CPU EFFECTS (not code)
+   └─ Cache hits/misses
+   └─ Branch prediction
+   └─ Speculative execution
+   └─ Remedy: Impossible to eliminate completely
+
+3. OS SCHEDULER
+   └─ Context switching
+   └─ Other processes running
+   └─ Remedy: Run isolated or with CPU affinity
+
+SOLUTION: Add memory barriers + volatile
